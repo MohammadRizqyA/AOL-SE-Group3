@@ -1,0 +1,191 @@
+CREATE TABLE student (
+	studentID VARCHAR(3) PRIMARY KEY,
+    name VARCHAR(50),
+    phoneNumber INT,
+    address TEXT,
+    DOB DATE,
+    gender VARCHAR(50),
+    `status` VARCHAR(50),
+    email VARCHAR(50),
+    `password` VARCHAR(255),
+    studentImage TEXT
+);
+CREATE TABLE courseCategory (
+	courseCatID VARCHAR(2) PRIMARY KEY,
+    courseCat VARCHAR(50)
+);
+CREATE TABLE course (
+	courseID VARCHAR(3) PRIMARY KEY,
+    courseCatID VARCHAR(2),
+    courseTitle VARCHAR(255),
+    `level` VARCHAR(50),
+    courseDescription TEXT,
+    price DECIMAL(10,2),
+    rating DECIMAL(10,1),
+    courseThumbnail TEXT,
+    
+    FOREIGN KEY (courseCatID) REFERENCES courseCategory(courseCatID)
+    ON DELETE CASCADE ON UPDATE CASCADE
+);
+CREATE TABLE cart (
+    studentID VARCHAR(3),
+	courseID VARCHAR(3),
+    price DECIMAL(10,2),
+    
+    PRIMARY KEY (studentID, courseID),
+    FOREIGN KEY (studentID) REFERENCES student(studentID)
+    ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (courseID) REFERENCES course(courseID)
+    ON DELETE CASCADE ON UPDATE CASCADE
+);
+CREATE TABLE `session` (
+	sessionID VARCHAR(3) PRIMARY KEY,
+    courseID VARCHAR(3),
+    sessionType VARCHAR(50),
+    
+    FOREIGN KEY (courseID) REFERENCES course(courseID)
+    ON DELETE CASCADE ON UPDATE CASCADE
+);
+CREATE TABLE lesson (
+	lessonID VARCHAR(3) PRIMARY KEY,
+    sessionID VARCHAR(3),
+    videoURL TEXT,
+    description TEXT,
+    
+    FOREIGN KEY (sessionID) REFERENCES `session`(sessionID)
+    ON DELETE CASCADE ON UPDATE CASCADE
+);
+CREATE TABLE exercise (
+	exerciseID VARCHAR(3) PRIMARY KEY,
+    sessionID VARCHAR(3),
+    question TEXT,
+    
+    FOREIGN KEY (sessionID) REFERENCES `session`(sessionID)
+    ON DELETE CASCADE ON UPDATE CASCADE
+);
+CREATE TABLE project (
+	projectID VARCHAR(3) PRIMARY KEY,
+    sessionID VARCHAR(3),
+    projectTitle VARCHAR(255),
+    projectDetail TEXT,
+    
+    FOREIGN KEY (sessionID) REFERENCES `session`(sessionID)
+    ON DELETE CASCADE ON UPDATE CASCADE
+);
+CREATE TABLE exerciseAttempt (
+	studentID VARCHAR(3),
+    exerciseID VARCHAR(3),
+    answer TEXT,
+    score DECIMAL(10,1),
+    `status` VARCHAR(50),
+    
+    PRIMARY KEY (studentID, exerciseID),
+    FOREIGN KEY (studentID) REFERENCES student(studentID)
+    ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (exerciseID) REFERENCES exercise(exerciseID)
+    ON DELETE CASCADE ON UPDATE CASCADE
+);
+CREATE TABLE projectAttempt (
+	studentID VARCHAR(3),
+    projectID VARCHAR(3),
+    submitedFile TEXT,
+    score DECIMAL(10,1),
+    `status` VARCHAR(50),
+    
+    PRIMARY KEY (studentID, projectID),
+    FOREIGN KEY (studentID) REFERENCES student(studentID)
+    ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (projectID) REFERENCES project(projectID)
+    ON DELETE CASCADE ON UPDATE CASCADE
+);
+CREATE TABLE learningProgress (
+	studentID VARCHAR(3),
+    sessionID VARCHAR(3),
+    progressValue INT,
+    sessionStatus VARCHAR(10),
+    
+    PRIMARY KEY (studentID, sessionID),
+    FOREIGN KEY (studentID) REFERENCES student(studentID)
+    ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (sessionID) REFERENCES `session`(sessionID)
+    ON DELETE CASCADE ON UPDATE CASCADE
+);
+CREATE TABLE overallProgress (
+	studentID VARCHAR(3),
+    courseID VARCHAR(3),
+    progress INT,
+    progressStatus VARCHAR(10),
+    
+    PRIMARY KEY (studentID, courseID),
+    FOREIGN KEY (studentID) REFERENCES student(studentID)
+    ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (courseID) REFERENCES course(courseID)
+    ON DELETE CASCADE ON UPDATE CASCADE
+);
+CREATE TABLE enrolled (
+	studentID VARCHAR(3),
+    courseID VARCHAR(3),
+    enrollmentDate DATE,
+    
+    PRIMARY KEY (studentID, courseID),
+    FOREIGN KEY (studentID) REFERENCES student(studentID)
+    ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (courseID) REFERENCES course(courseID)
+    ON DELETE CASCADE ON UPDATE CASCADE
+);
+CREATE TABLE temporaryCheckout (
+	studentID VARCHAR(3) PRIMARY KEY,
+    subtotal DECIMAL(10,2),
+    paymentTypeID VARCHAR(2),
+    paymentFee DECIMAL(10,1),
+    tax DECIMAL(10,2),
+    total DECIMAL(10,2),
+    
+    FOREIGN KEY (studentID) REFERENCES student(studentID)
+    ON DELETE CASCADE ON UPDATE CASCADE
+);
+CREATE TABLE payment (
+	paymentTypeID VARCHAR(2) PRIMARY KEY,
+    paymentType VARCHAR(50),
+    adminFee DECIMAL(10,2),
+    paymentIcon VARCHAR(255)
+);
+CREATE TABLE `order` (
+	orderID VARCHAR(6) PRIMARY KEY,
+    studentID VARCHAR(3),
+    orderDate DATE,
+    paymentTypeID VARCHAR(2),
+   	paymentFee DECIMAL(10,2),
+    tax DECIMAL(10,2),
+    totalSave DECIMAL(10,2),
+    totalPrice DECIMAL(10,2),
+    
+    FOREIGN KEY (studentID) REFERENCES student(studentID)
+    ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (paymentTypeID) REFERENCES payment(paymentTypeID)
+    ON DELETE CASCADE ON UPDATE CASCADE
+);
+CREATE TABLE orderDetail (
+	orderDetailID VARCHAR(6) PRIMARY KEY,
+    orderID VARCHAR(6),
+    courseID VARCHAR(3),
+    price DECIMAL(10,2),
+    
+    FOREIGN KEY (orderID) REFERENCES `order`(orderID)
+    ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (courseID) REFERENCES course(courseID)
+    ON DELETE CASCADE ON UPDATE CASCADE
+);
+CREATE TABLE discount (
+	courseID VARCHAR(3) PRIMARY KEY,
+    discountPercent DECIMAL(10,2),
+    finalPrice DECIMAL(10,2),
+    
+    FOREIGN KEY (courseID) REFERENCES course(courseID)
+    ON DELETE CASCADE ON UPDATE CASCADE
+);
+CREATE TABLE admin (
+	adminID INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50),
+    `password` VARCHAR(255)
+);

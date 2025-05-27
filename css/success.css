@@ -1,0 +1,190 @@
+
+.check-loading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 180px;
+}
+.check-loading h2 {
+    font-family: "Afacad Flux", sans-serif;
+    font-size: 20px; 
+    margin-top: 0px;
+    color: #a43636;
+    animation: hideText 0.3s ease forwards;
+    animation-delay: 2s;
+    opacity: 1;
+}
+@keyframes hideText {
+    0% {
+        opacity: 1;
+        transform: translateY(35px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+}
+label {
+    position: absolute;
+    top: 16%;
+    width: 120px;
+    height: 120px;
+    display: inline-block;
+    border: 5px solid rgba(255, 255, 255, .2);
+    border-radius: 50%;
+    border-left-color: #a43636;
+    animation: rotate 1.2s linear infinite;
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+@keyframes rotate {
+    100% { transform: rotate(360deg); }
+}
+
+
+label div {
+    display: none;
+}
+
+label div::after     {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 25px;
+    transform: scaleX(-1) rotate(135deg);
+    width: 25px;
+    height: 50px;
+    border-top: 8px solid #a43636;
+    border-right: 8px solid #a43636;
+    transform-origin: left top;
+    animation: check 0.3s ease;
+}
+
+@keyframes check {
+    0% { height: 0; width: 0; opacity: 1; }
+    40% { height: 0px; width: 0px; opacity: 1; }
+    80% { height: 0px; width: 25px; opacity: 1; }
+    100% { height: 50px; width: 25px; opacity: 1; }
+}
+
+.content input {
+    
+    
+    display: none;
+}
+
+.content input:checked ~ label div {
+    display: block;
+}
+
+.content input:checked ~ label {
+    animation: none;
+    border-color: #a43636;
+    transition: border 0.5s ease-out;
+}
+
+.after {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0; /* Awalnya tersembunyi */
+    animation: fadeIn 0.2s ease-in-out forwards;
+    animation-delay: 2s; /* Muncul setelah 2 detik */
+    margin-top: 400px;
+}
+.after h1{
+    font-family: "Afacad Flux", sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    color: #a43636;
+    text-shadow: 4px 4px 10px 4px rgba(125, 125, 125, 0.1);
+}
+.after p {
+    font-family: "Afacad Flux", sans-serif;
+    color: rgb(162, 162, 162);
+}
+.second-after {
+    margin-top: 10px;
+    text-align: center;
+}
+.orderID {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.orderID h5 {
+    font-family: "Afacad Flux", sans-serif;
+    color: rgb(162, 162, 162);
+    font-size: 15px;
+    font-weight: 400;
+    display: flex;
+}
+.orderID h3 {
+    font-family: "Afacad Flux", sans-serif;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    font-weight: 800;
+    display: flex;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(50px);
+    }
+}
+
+
+.continue{
+    opacity: 0;
+    animation: continue 0.2s ease-in-out forwards;
+    animation-delay: 2s; 
+    top: 0;
+    align-items: center;
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.continue .study {
+    background-color: #a43636;
+    width: 250px;
+    margin-top: 20px;
+    border-radius: 20px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    font-family: "Afacad Flux", sans-serif;
+    font-weight: 600;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.continue .study:hover {
+    background-color: #c85151;
+}
+
+.continue .home {
+    font-family: "Afacad Flux", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+}
+@keyframes continue {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(40px);
+    }
+}
