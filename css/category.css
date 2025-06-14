@@ -1,0 +1,511 @@
+.content {
+    padding-top: 20px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.banner-cat {
+    background-image: url('../images/banner/category.png');
+    background-size: cover; 
+    width: 80%;
+    height: 350px;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.banner-text {
+    margin-left: 20px;
+    margin-top: 20px;
+    color: rgb(255, 255, 255);
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.635);
+    
+}
+.banner-text h2 {
+    font-family: "Gabarito", sans-serif;
+    font-weight: 1000;
+    font-size: 40px;
+}
+.banner-text h3 {
+    margin-top: 5px;
+    font-family: "Gabarito", sans-serif;
+    font-weight: 300;
+    width: 500px;
+    font-size: 13px;
+}
+.text {
+    text-align: left;
+    width: 80%;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+}
+.text h1 {
+    font-family: "Gabarito", sans-serif;
+    line-height: 30px;
+    font-weight: 800;
+    font-size: 25px;
+    border-right: 2px solid rgb(227, 227, 227);
+    padding-right: 10px;
+    margin-right: 10px;
+    color: rgb(0, 0, 0);
+}
+.text p {
+    font-size: 13px;
+    font-family: "Gabarito", sans-serif;
+    width: 500px;
+}
+
+
+
+
+.course-container {
+    width: 80%;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    row-gap: 40px;
+    height: auto;
+    padding: 40px;
+    border-bottom: 1px solid rgb(202, 202, 202);
+    border-top: 1px solid rgb(202, 202, 202);
+}
+.course-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 270px;
+    background-color: white;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgb(182, 182, 182);
+}
+.course-wrapper img{
+    width: 300px;
+    height: auto;
+    transition: filter 0.3s ease;
+}
+.course-wrapper:hover img {
+    filter: brightness(85%);
+}
+.course-attribute {
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.course-attribute h2{
+    font-family: "Afacad Flux", sans-serif;
+    font-weight: 700;
+    line-height: 18px;
+    font-size: 18px;
+    width: 250px;
+    color: #000;
+}
+.course-attribute p{
+    font-family: "Afacad Flux", sans-serif;
+    font-weight: 700;
+    line-height: 18px;
+    font-size: 15px;
+    width: 250px;
+    color: #000;
+}
+.course-group {
+    position: relative;
+}
+.course-details {
+  position: absolute;
+  top: 97%;
+  left: 0;
+  width: 300px;
+  height: 0;
+  overflow: hidden;
+  background-color: #ffffff;
+  z-index: 999;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: height 0.4s ease, transform 0.4s ease;
+  display: flex;
+  align-items: left;
+  justify-content: center;
+  border-left: 1px solid rgb(182, 182, 182);
+  border-right: 1px solid rgb(182, 182, 182);
+  border-bottom: 1px solid rgb(182, 182, 182);
+
+}
+
+.course-group:hover .course-details {
+  height: auto;
+  opacity: 1;
+}
+.details-content {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  width: 250px;
+  margin-top: 20px;
+}
+
+.course-group:hover .details-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.first-detail {
+    display: flex;
+    justify-content: space-between;
+}
+.level-rating {
+    width: 100px;
+}
+.level-rating p {
+    font-family: "Afacad Flux", sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+}
+.pricing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.discount-checkout {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    flex-direction: column;
+}
+.discount-checkout h5 {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: rgb(17, 17, 17);
+}
+.discount-checkout p {
+    font-family: "Nunito Sans", sans-serif;
+    position: relative;
+    display: inline-block;
+    color: rgb(173, 173, 173);
+    font-size: 13px;
+}
+.discount-checkout p::after {
+    content: "";
+  position: absolute;
+  width: 100%; /* Panjang garis sesuai teks */
+  height: 1px; /* Ketebalan garis */
+  background-color: rgb(255, 0, 0); /* Warna garis */
+  top: 45%;
+  left: 0;
+  transform: rotate(-10deg);
+}
+
+.non-discount-checkout h5 {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: rgb(17, 17, 17);
+}
+
+.description {
+    font-family: "Afacad Flux", sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.add-to-bag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.add-to-bag button {
+    border: none;
+    width: 200px;
+    height: 40px;
+    margin-top: 15px;
+    cursor: pointer;
+    background-color: #ae4949;
+    color: white;
+    border-radius: 10px;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+.add-to-bag button:hover {
+    background-color: #823030;
+}
+.sessions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.sessions p {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 12px;
+    margin-top: 5px;
+}
+.details-content h2 {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 12px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.popup-message {
+    position: fixed;
+    top: 10%;
+    right: 39%;
+    background-color: rgb(255, 255, 255);
+    width: 400px;
+    height: 30px;
+    color: rgb(148, 148, 148);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 50px 50px 50px 50px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    z-index: 9999;
+    font-size: 13px;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: fadeOut 3s ease forwards;
+}
+
+@keyframes fadeOut {
+    0%   { opacity: 1; }
+    80%  { opacity: 1; }
+    100% { opacity: 0; transform: translateY(-10px); }
+}
+
+
+.ratings {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.ratings h2 {
+    font-size: 12px;
+    margin-right: 10px;
+    color: rgb(0, 0, 0);
+}
+.ratings p {
+    margin-left: 10px;
+    font-size: 15px;
+    color: rgb(202, 202, 202);
+}
+.stars {
+  width: 10px;
+  height: 10px;
+  fill: none;
+  stroke: rgb(255, 208, 0);
+  stroke-width: 2.5;
+}
+.stars.full {
+  fill: rgb(255, 208, 0);
+}
+.stars.half path {
+  fill: url(#halfGrad);
+}
+
+.best-course {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    width: 80%;
+    margin-top: 10px;
+    padding: 20px;
+}
+.best-course h1 {
+    font-family: "Gabarito", sans-serif;
+    font-weight: 800;
+    font-size: 25px;
+    color: #353535;
+}
+.best-course h4 {
+    font-family: "Gabarito", sans-serif;
+    font-weight: 300;
+    color: #bdbdbd;
+    margin-bottom: 20px;
+}
+.best-course-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 20px;
+    color: black;
+    padding: 20px;
+    border: 1px solid rgb(202, 202, 202);
+}
+.best-course-wrapper:hover {
+    background-color: rgb(243, 243, 243);
+}
+.best-course-wrapper img {
+    width: 400px;
+    height: 250px;
+}
+.best-course-attribute {
+    font-family: "Gabarito", sans-serif;
+    width: 100%;
+}
+.best-course-attribute h2{
+    font-weight: 800;
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+.best-course-attribute h3 {
+    font-size: 15px;
+    color: rgb(105, 105, 105);
+}
+.best-course-attribute p {
+    margin-top: 10px;
+    width: 500px;
+    font-size: 15px;
+}
+.ratingss {
+    margin-top: 20px;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.ratingss h2 {
+    font-size: 15px;
+    margin-top: 5px;
+    margin-right: 10px;
+    color: rgb(0, 0, 0);
+}
+.ratingss p {
+    margin-left: 10px;
+    font-size: 15px;
+    color: rgb(202, 202, 202);
+}
+.starss {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: rgb(255, 208, 0);
+  stroke-width: 2.5;
+}
+.starss.full {
+  fill: rgb(255, 208, 0);
+}
+.starss.half path {
+  fill: url(#halfGrad);
+}
+.best-discount {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 15px;
+}
+.best-discount h5 {
+    font-size: 30px;
+    color: #52783e;
+    display: flex;
+    align-items: left;
+    gap: 5px;
+}
+.best-discount h5 span {
+    font-size: 17px;
+    margin-top: 2px;
+    color: #52783e;
+}
+.best-discount p {
+    font-size: 30px;
+    color: rgb(189, 189, 189);
+    font-weight: 200;
+    display: flex;
+    align-items: left;
+    gap: 5px;
+    text-decoration: line-through;
+}
+.best-discount p span {
+    font-size: 17px;
+    color: rgb(189, 189, 189);
+    font-weight: 200;
+}
+
+.career-path {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 90%;
+    font-family: "Gabarito", sans-serif;
+}
+.career-path h1 {
+    font-size: 30px;
+    font-weight: 800;
+    text-align: center;
+    line-height: 25px;
+    margin-bottom: 20px;
+}
+.career-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.career-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 20px;
+    column-gap: 20px;
+    width: 90%;
+}
+.career-wrapper {
+    font-family: "Gabarito", sans-serif;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid rgb(231, 231, 231);
+    justify-content: center;
+    background-color: #ffffff;
+    color: rgb(36, 36, 36);
+}
+.career-wrapper h2 {
+    font-size: 15px;
+    padding: 5px;
+    width: 10%;
+}
+.career-wrapper p {
+    font-size: 12px;
+    width: 400px;
+}
+.career-wrapper h3 {
+    font-size: 15px;
+}

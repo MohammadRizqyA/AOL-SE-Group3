@@ -1,0 +1,625 @@
+
+.container {
+    width: 100%;
+    height: auto;
+}
+.con {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 84px;
+}
+.title {
+    padding-top: 60px;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    margin-left: 120px;
+}
+.title h1 {
+    font-size: 30px;
+    font-family: "Afacad Flux", sans-serif;
+    font-weight: 800;
+    color: rgb(80, 80, 80);
+    display: flex;
+    align-items: center;
+}
+.title h1 p {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.content {
+    display: flex;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 0px;
+    gap: 10px;
+}
+.cart-content {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    height: auto;
+}
+.items {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: auto;
+}
+.totalItems {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+.items a {
+    color: black;
+}
+.item {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.155);
+    padding-bottom: 10px;
+    padding-top: 10px;
+    width: 900px;
+}
+.item:hover {
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+.item img {
+    width: 180px;
+    height: 120px;
+    border-radius: 10px;
+}
+.course-attribute {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+}
+.course-attribute h1 {
+    font-family: "Afacad Flux", sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+}
+.course-attribute h2 {
+    font-family: "Afacad Flux", sans-serif;
+    font-weight: 800;
+    font-size: 15px;
+    color: rgb(188, 188, 188);
+}
+.discount {
+    width: 100px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    gap: 10px;
+}
+.discounted {
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+}
+.discount h5 {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 900;
+    font-size: 22px;
+    color: rgb(179, 62, 62);
+    display: flex;
+    align-items: left;
+    gap: 5px;
+}
+.discount h5 span {
+    margin-top: 2px;
+    font-size: 15px;
+}
+.discount i {
+    margin-top: 5px;
+    color: rgb(179, 62, 62);
+    margin-left: 5px;
+}
+.discount p {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+    position: relative;
+    display: inline-block;
+    color: rgb(173, 173, 173);
+    display: flex;
+    align-items: left;
+    text-decoration: line-through;
+}
+.discount p span {
+    margin-top: 2px;
+    font-size: 15px;
+}
+.non-discount {
+    margin-top: 20px;
+}
+.non-discount h5{
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+}
+.sub-attribute {
+    display: flex;
+    gap: 10px;
+}
+.sub-attribute h2 {
+    border-right: 1px solid rgba(0, 0, 0, 0.168);
+    padding-right: 10px;
+    font-weight: 400;
+    color: rgb(188, 188, 188);
+}
+.sub-attribute p {
+    color: rgb(188, 188, 188);
+    font-weight: 400;
+}
+.module-lesson {
+    display: flex;
+    gap: 10px;
+    padding-right: 10px;
+    font-weight: 400;
+    color: rgb(188, 188, 188);
+    font-family: "Afacad Flux", sans-serif;
+}
+.item form {
+    display: flex;
+    align-items: center;
+    width: 150px;
+}
+.item form button{
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+.items  form button {
+    font-size: 13px;
+}
+.items form button:hover {
+    text-decoration: underline;
+}
+
+.summary {
+    width: 30%;
+    height: 500px;
+}
+.summary h2 {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 900;
+}
+.summary-price {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.summary-price h5 {
+    font-family: "Afacad Flux", sans-serif;
+    font-weight: 900;
+    font-size: 40px;
+    color: rgb(179, 62, 62);
+    display: flex;
+    align-items: left;
+    gap: 5px;
+}
+.summary-price h5 span {
+    margin-top: 10px;
+    font-size: 22px;
+}
+.summary-price p {
+    font-family: "Afacad Flux", sans-serif;
+    font-weight: 100;
+    font-size: 25px;
+    margin-top: 10px;
+    position: relative;
+    display: inline-block;
+    color: rgb(173, 173, 173);
+    display: flex;
+    align-items: left;
+    gap: 5px;
+}
+.summary-price p span {
+    font-size: 20px;
+}
+.summary-price p::after {
+    content: "";
+  position: absolute;
+  width: 100%; /* Panjang garis sesuai teks */
+  height: 1px; /* Ketebalan garis */
+  background-color: rgb(255, 0, 0); /* Warna garis */
+  top: 40%;
+  left: 0;
+  transform: rotate(-10deg);
+}
+.save {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 100;
+    font-size: 15px;
+    display: flex;
+    gap: 5px;
+}
+.save h5 {
+     font-family: "Nunito Sans", sans-serif;
+    font-weight: 800;
+    font-size: 15px;
+}
+
+.btn {
+    margin-top: 20px;
+    width: 300px;
+    height: 40px;
+    background-color: rgb(170, 68, 68);
+    color: white;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: rgb(190, 68, 68);
+}
+.tax {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 100;
+    font-size: 13px;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.checkout {
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 5px;
+    left: 54.5%;
+    top: 55%;
+    transform: translate(-50%, -50%) scale(1.1);
+    z-index: 9;
+    position: absolute;
+    padding-top: 0px;
+}
+.checkout-content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 300px;
+    margin-right: 200px;
+}
+.checkout-content h1 {
+    font-family: "Inter", sans-serif;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.checkout-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    
+}
+.left {
+    width: 50%;
+    
+}
+.right {
+    width: 50%;
+}
+
+
+.payment-button {
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+    display: block;
+    align-items: center;
+    color: black;
+    font-weight: 300;
+    margin-left: 40px;
+}
+.payment-button i {
+    font-size: 15px;
+    margin-right: 5px;
+}
+
+
+  .payment-method{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    transition: background-color 0.3s, border-color 0.3s;
+    cursor: pointer;
+    width: 200px;
+    position: fixed;
+  }
+  .payment-method h2 {
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.168);
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    width: 320px;
+    text-align: left;
+    color: #5d5d5d;
+    
+  }
+  .payments {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+  }
+  
+.payment-wrap:hover {
+  background-color: #ffffff;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 2px;
+}
+input[type="radio"]:checked ~ .payment-wrap {
+    color: black;
+    font-size: 20px;
+}
+input[type="radio"]:checked ~ .payment-wrap p{
+    color: black;
+    font-size: 10px;
+}
+
+input[type="radio"]:checked + span {
+    font-weight: bold;
+    color: #007bff;
+}
+
+input[type="radio"]:checked + img {
+    filter: brightness(3.2);
+}
+  .payment-method label{
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 0.2px;
+    color: #b9b9b9;
+  }
+
+  
+  .payment-wrap {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-bottom: 1px solid rgba(143, 143, 143, 0.332);
+    transition: 0.2s ease-in;
+    cursor: pointer;
+}
+.payment-wrap p{
+  text-align: right;
+  width: 100%;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 10px;
+  color: #ababab;
+}
+
+.payment-wrap:hover {
+    transform: scale(1.02);
+}
+
+input[type="radio"] {
+  display: none;
+}
+.proceed-payment {
+    padding-bottom: 20px;
+    
+}
+.proceed-payment button {
+    border: none;
+    background-color: #c43535;
+    color: white;
+    width: 440px;
+    height: 35px;
+    cursor: pointer;
+    border-radius: 1px;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.proceed-payment button:hover {
+   background-color: rgb(155, 69, 69);
+}
+
+.course-checkout {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.course-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.168);
+    padding-bottom: 10px;
+    width: 420px;
+}
+.course-wrapper img {
+    width: 100px;
+}
+.course-details {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+}
+
+.right {
+    margin-top: 0px;
+}
+.right h2 {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.168);
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    width: 420px;
+    text-align: left;
+    color: #5d5d5d;
+}
+
+.first {
+    display: flex;
+    flex-direction: column;
+    width: 255px;
+}
+.first h3 {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 13px;
+    width: 250px;
+    font-weight: 800;
+}
+.first p {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 12px;
+    width: 280px;
+    font-weight: 300;
+}
+.second {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+}
+.discount-checkout {
+    width: 100px;
+    align-items: left;
+    display: flex;
+    flex-direction: column;
+}
+.discounted-checkout {
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+}
+.discount-checkout h5 {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    color: rgb(179, 62, 62);
+    display: flex;
+    align-items: left;
+    gap: 5px;
+}
+.discount-checkout h5 span {
+    font-size: 12px;
+    margin-top: 2px;
+}
+.discount-checkout i {
+    margin-top: 5px;
+    color: rgb(179, 62, 62);
+    margin-left: 5px;
+}
+.discount-checkout p {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 100;
+    font-size: 12px;
+    color: rgb(152, 152, 152);
+    text-decoration: line-through;
+    display: flex;
+    align-items: left;
+    gap: 5px;
+}
+.discount-checkout p span {
+    font-size: 10px;
+}
+.non-discount-checkout h5{
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+}
+
+.summary-checkout {
+    margin-top: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.168);
+    width: 440px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+}
+.summary-label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 350px;
+}
+.summary-label h3 {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 13px;
+    display: flex;
+    gap: 5px;
+    color: black;
+    font-weight: 600;
+}
+.summary-label h3 p {
+    font-size: 12px;
+    margin-top: 2px;
+    color: #ababab;
+}
+.summary-price-checkout {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.summary-price-checkout p {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 13px;
+}
+.empty-cart-container {
+    margin-top: 50px;
+    width: 1480px;
+    display: flex;
+    justify-content: center;
+}
+.empty-cart {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.empty-cart img {
+    width: 400px;
+    opacity: 0.5;
+}
+.empty-cart p {
+    margin-top: 20px;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 18px;
+    color: #b9b9b9;
+}
+.empty-cart a {
+    margin-top: 20px;
+    font-family: "Gabarito", sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    padding: 5px;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    background-color: #3e3e3e;
+    width: 200px;
+    text-align: center;
+}
+.empty-cart a:hover {
+    background-color: #575757;
+}
+.footer {
+    margin-top: 120px;
+    position: relative;
+}

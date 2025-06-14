@@ -1,0 +1,477 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.788);
+    display: flex;
+    justify-content: center;    
+}
+
+.left {
+    width: 5%;
+    background-color: rgb(255, 255, 255);
+    height: auto;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    position: fixed;
+    padding-top: 30px;
+    left: 0;
+}
+
+.menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 150px;
+}
+.menu a {
+    font-size: 17px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #757575;    
+}
+.left a:hover {
+    color: #2d2d2d;
+}
+.left .imglogo {
+    transform: rotate(90deg);
+    width: 80px;
+    margin-bottom: 150px;
+}
+.home i {
+    padding-top: 20px;
+    padding-left: 25px;
+    width: 40px;
+    border-top: 1px solid rgb(194, 194, 194);
+}
+.lecProfile {
+    display: flex;
+    align-items: center;
+    object-fit: contain;
+}
+.lecImage {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.cs {
+    margin-bottom: 100px;
+    margin-left: 30px;
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #757575;
+}
+
+.head {
+    display: flex;
+    align-items: center;
+}
+.head a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    border: 1px solid rgb(167, 167, 167);
+    width: 25px;
+    height: 25px;
+    text-decoration: none;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+}
+.head h2 {
+    font-family: "Afacad Flux", sans-serif;
+    font-weight: 300;
+    margin-right: 20px;
+    margin-left: 690px;
+}
+.head h3 {
+    font-size: 18px;
+    font-family: "Gabarito", sans-serif; 
+    color: rgb(52, 124, 32);
+    background-color: #87d35e47;
+    width: 80px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.right {
+    width: 1500px;
+    margin-top: 40px;
+}
+.right h1 {
+    margin-left: 20px;
+    font-family: "Gabarito", sans-serif;  
+    font-weight: 800;
+}
+.main {
+    margin-top: 20px;
+    width: 100%;
+    height: auto;
+    background-color: white;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+}
+.course img {
+    width: 550px;
+}
+.course {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: left;
+    width: 600px;
+    border-right: 1px solid rgb(209, 209, 209);
+    padding-right: 30px;
+}
+.details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.first {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+    gap: 20px;
+    font-family: "Gabarito", sans-serif;
+}
+.first h2 {
+    font-size: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(219, 219, 219);
+}
+.desc-enroll {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.first-child h3 {
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+}
+.first-child {
+    display: flex;
+}
+.first-child p {
+    text-align: left;
+}
+.second {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 5px;
+    font-family: "Gabarito", sans-serif;
+    border-right: 1px solid rgb(199, 199, 199);
+    width: 300px;
+    margin-right: 20px;
+}
+.second p {
+    font-size: 15px;
+}
+.second h2 {
+    font-size: 15px;
+    display: flex;
+    gap: 5px;
+}
+.second h2 p {
+    font-size: 15px;
+    font-weight: 300;
+    color: #757575;
+}
+.first h5 {
+    font-family: "Gabarito", sans-serif;
+    font-size: 35px;
+    color: #44791d;
+    text-align: left;
+}
+.pricing-non-discount {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.pricing-non-discount form button{
+    border: none;
+    width: 150px;
+    height: 30px;
+    background-color: #44791d;
+    color: white;
+    font-family: "Gabarito", sans-serif;
+    cursor: pointer;
+}
+.pricing-discount form button{
+    border: none;
+    width: 150px;
+    height: 30px;
+    background-color: #44791d;
+    color: white;
+    font-family: "Gabarito", sans-serif;
+    cursor: pointer;
+}
+.pricing-discount {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.button-discount {
+    border: none;
+    width: 250px;
+    height: 30px;
+    background-color: #44791d;
+    color: white;
+    font-family: "Gabarito", sans-serif;
+    cursor: pointer;
+}
+.pricing-discount h5 {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    align-items: left;
+    gap: 5px;
+}
+.pricing-discount h5 span {
+    font-size: 20px;
+    margin-top: 5px;
+}
+.pricing-discount p {
+     position: relative;
+  display: inline-block;
+  color: rgb(173, 173, 173);
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: left;
+  gap: 5px;
+}
+.pricing-discount p span {
+    font-size: 15px;
+    margin-top: 5px;
+}
+.pricing-discount p::after {
+  content: "";
+  position: absolute;
+  width: 100%; /* Panjang garis sesuai teks */
+  height: 1px; /* Ketebalan garis */
+  background-color: rgb(255, 0, 0); /* Warna garis */
+  top: 45%;
+  left: 0;
+  transform: rotate(-10deg); /* Putar garis agar diagonal */
+}
+
+.manage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.manage h1 {
+    font-family: "Gabarito", sans-serif;
+    font-size: 20px;
+    color: #757575;
+}
+.buttons {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    gap: 5px;
+    align-items: center;
+}
+.buttons h2 {
+    font-family: "Gabarito", sans-serif;
+    font-size: 15px;
+    color: #000000;
+    margin-right: 230px;
+}
+.add-session-button {
+    width: 100px;
+    height: 25px;
+    background-color: #823737;
+    color: rgb(255, 255, 255);
+    font-family: "Gabarito", sans-serif;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+}
+.add-session-button:hover {
+    background-color: #651e1e;
+}
+.add-requirement-button {
+    width: 200px;
+    height: 25px;
+    background-color: #823737;
+    color: rgb(255, 255, 255);
+    font-family: "Gabarito", sans-serif;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+}
+.add-requirement-button:hover {
+    background-color: #651e1e;
+}
+.form-add {
+    margin-top: 50px;
+}
+.form-add form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.form-add form input {
+    width: 320px;
+    height: 50px;
+    padding-left: 15px;
+}
+.form-add form textarea {
+    width: 300px;
+    height: 150px;
+    padding: 20px;
+}
+.form-add form button {
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: #373737;
+    color: white;
+    font-family: "Gabarito", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    width: 340px;
+    cursor: pointer;
+}
+.form-add form button:hover {
+    background-color: #494949;
+}
+.form-add form label {
+    font-family: "Gabarito", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+}
+.form-add form h2 {
+    font-family: "Gabarito", sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+}
+.header-add {
+    text-align: center;
+    margin-bottom: 15px;
+    font-family: "Gabarito", sans-serif;
+}
+.header-add p {
+    font-size: 15px;
+    color: #757575;
+}
+.add-session {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.session-list {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 10px;
+    border: 2px solid rgb(222, 222, 222);
+    padding-bottom: 20px;
+}
+.session-list h2 {
+    font-family: "Gabarito", sans-serif;
+    font-size: 20px;   
+}
+.session-wrap {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    font-family: "Gabarito", sans-serif;
+    font-size: 15px;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+.session-wrap h3 {
+    width: 150px;
+    font-weight: 300;
+    text-align: center;
+}
+.session-wrap h4 {
+    width: 150px;
+    font-weight: 300;
+}
+.session-wrap p {
+    width: 150px;
+}
+.list-label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: center;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    border-bottom: 2px solid rgb(222, 222, 222);
+    padding-bottom: 10px;
+}
+.list-label p {
+    width: 150px;
+    font-family: "Gabarito", sans-serif;
+    font-weight: 600;
+
+}
+
+.head form button {
+    width: 150px;
+    height: 30px;
+    cursor: pointer;
+    background-color: #ffffff;
+    color: rgb(10, 10, 10);
+    font-size: 13px;
+    margin-left: 20px;
+}
+.head form button:hover {
+    background-color: #e6e6e6;
+}
+.buttons {
+    gap: 150px;
+}
+.add-session-col {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.certi-req {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: left;
+    align-items: left;
+    margin-bottom: 55px;
+}
+.certificate-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    font-family: "Gabarito", sans-serif;
+}
+.preview-certif {
+    width: 450px;
+}

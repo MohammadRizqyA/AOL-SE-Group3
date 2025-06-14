@@ -1,0 +1,427 @@
+
+
+.banner {
+    display: flex;
+    justify-content: center;
+}
+.content-banner{
+  height: 500px;
+  width: 100%;
+  justify-content: center;
+  background-color: #000;
+  background-image: url('../images/banner/home-banner.png');
+  background-size: cover; 
+  display: flex;
+}
+.content-banner a{
+  margin-left: 380px;
+  border-radius: 20px;
+  height: 0;
+  position: relative;
+  top: 78%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.content-banner a img {
+    width: 200px;
+    transition: ease-in 0.1s;
+}
+.content-banner a img:hover {
+    width: 210px;
+    filter: brightness(1000);
+}
+
+.universities {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 35px;
+    font-family: "Gabarito", sans-serif;
+    font-size: 17px;
+    color: #929292;
+    
+}
+.slider-container {
+    width: 75%;
+}
+
+.slider{
+  padding-top: 0px;
+  width: 100%;
+  height: var(--height);
+  overflow: hidden;
+  mask-image: linear-gradient(
+      to right,
+      transparent,
+      #000 10% 90%,
+      transparent
+  );
+}
+.slider .list{
+  display: flex;
+  width: 100%;
+  min-width: calc(var(--width) * var(--quantity));
+  position: relative;
+}
+.slider .list .item{
+  width: var(--width);
+  height: var(--height);
+  position: absolute;
+  left: 100%;
+  animation: autoRun 10s linear infinite;
+  transition: filter 0.5s;
+  animation-delay: calc( (10s / var(--quantity)) * (var(--position) - 1) - 10s)!important;
+}
+.slider .list .item img{
+  width: 100%;
+}
+@keyframes autoRun{
+  from{
+      left: 100%;
+  }to{
+      left: calc(var(--width) * -1);
+  }
+}
+.slider:hover .item{
+  animation-play-state: paused!important;
+  filter: grayscale(1);
+}
+.slider .item:hover{
+  filter: grayscale(0);
+}
+.slider[reverse="true"] .item{
+  animation: reversePlay 10s linear infinite;
+}
+@keyframes reversePlay{
+  from{
+      left: calc(var(--width) * -1);
+  }to{
+      left: 100%;
+  }
+}
+
+.content-category {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.categories-button {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: left;
+    align-items: left;
+    margin-bottom: 10px;
+}
+.categories-button button {
+    background-color: transparent;
+    border: none;
+    font-family: "Gabarito", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #6a6a6a;
+    cursor: pointer;
+}
+.categories-button button:hover {
+    color: #222222;
+}
+.course-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+.course-container-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 300px;
+}
+.show-all {
+    color: #adadad;
+    font-family: "Afacad Flux", sans-serif;
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 15px;
+    text-align: center;
+    display: flex;
+}
+.show-all i {
+    padding-bottom: 20px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+.show-all:hover {
+    color: #535353;
+}
+.course-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 270px;
+    background-color: white;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgb(182, 182, 182);
+}
+.course-wrapper img{
+    width: 300px;
+    height: auto;
+    transition: filter 0.3s ease;
+}
+.course-wrapper:hover img {
+    filter: brightness(85%);
+}
+.course-attribute {
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.course-attribute h2{
+    font-family: "Afacad Flux", sans-serif;
+    font-weight: 700;
+    line-height: 18px;
+    font-size: 18px;
+    width: 250px;
+    color: #000;
+}
+.course-attribute p{
+    font-family: "Afacad Flux", sans-serif;
+    font-weight: 700;
+    line-height: 18px;
+    font-size: 15px;
+    width: 250px;
+    color: #000;
+}
+
+.categories-button button.active-category {
+    color: rgb(43, 43, 43);
+    border-bottom: 1px solid rgb(7, 7, 7);
+    padding-bottom: 10px;
+}
+
+.course-group {
+    position: relative;
+}
+.course-details {
+  position: absolute;
+  top: 97%;
+  left: 0;
+  width: 300px;
+  height: 0;
+  overflow: hidden;
+  background-color: #ffffff;
+  z-index: 999;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: height 0.4s ease, transform 0.4s ease;
+  display: flex;
+  align-items: left;
+  justify-content: center;
+  border-left: 1px solid rgb(182, 182, 182);
+  border-right: 1px solid rgb(182, 182, 182);
+  border-bottom: 1px solid rgb(182, 182, 182);
+
+}
+
+.course-group:hover .course-details {
+  height: auto;
+  opacity: 1;
+}
+.details-content {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  width: 250px;
+  margin-top: 20px;
+}
+
+.course-group:hover .details-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.first-detail {
+    display: flex;
+    justify-content: space-between;
+}
+.level-rating {
+    width: 100px;
+}
+.level-rating p {
+    font-family: "Afacad Flux", sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+}
+.pricing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.discount-checkout {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    flex-direction: column;
+}
+.discount-checkout h5 {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: rgb(17, 17, 17);
+}
+.discount-checkout p {
+    font-family: "Nunito Sans", sans-serif;
+    position: relative;
+    display: inline-block;
+    color: rgb(173, 173, 173);
+    font-size: 13px;
+}
+.discount-checkout p::after {
+    content: "";
+  position: absolute;
+  width: 100%; /* Panjang garis sesuai teks */
+  height: 1px; /* Ketebalan garis */
+  background-color: rgb(255, 0, 0); /* Warna garis */
+  top: 45%;
+  left: 0;
+  transform: rotate(-10deg);
+}
+
+.non-discount-checkout h5 {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: rgb(17, 17, 17);
+}
+
+.description {
+    font-family: "Afacad Flux", sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.add-to-bag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.add-to-bag button {
+    border: none;
+    width: 200px;
+    height: 40px;
+    margin-top: 15px;
+    cursor: pointer;
+    background-color: #ae4949;
+    color: white;
+    border-radius: 10px;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+.add-to-bag button:hover {
+    background-color: #823030;
+}
+.sessions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.sessions p {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 12px;
+    margin-top: 5px;
+}
+.details-content h2 {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 12px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.popup-message {
+    position: fixed;
+    top: 10%;
+    right: 39%;
+    background-color: rgb(255, 255, 255);
+    width: 400px;
+    height: 30px;
+    color: rgb(148, 148, 148);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 50px 50px 50px 50px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    z-index: 9999;
+    font-size: 13px;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: fadeOut 3s ease forwards;
+}
+
+@keyframes fadeOut {
+    0%   { opacity: 1; }
+    80%  { opacity: 1; }
+    100% { opacity: 0; transform: translateY(-10px); }
+}
+
+
+.ratings {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.ratings h2 {
+    font-size: 12px;
+    margin-right: 10px;
+    color: rgb(0, 0, 0);
+}
+.ratings p {
+    margin-left: 10px;
+    font-size: 15px;
+    color: rgb(202, 202, 202);
+}
+.stars {
+  width: 10px;
+  height: 10px;
+  fill: none;
+  stroke: rgb(255, 208, 0);
+  stroke-width: 2.5;
+}
+.stars.full {
+  fill: rgb(255, 208, 0);
+}
+.stars.half path {
+  fill: url(#halfGrad);
+}
+
+
+.banner-promotion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+.banner-promotion img{
+    width: 1000px;
+}

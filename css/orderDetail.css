@@ -1,0 +1,178 @@
+body {
+    background-color: rgb(255, 255, 255);
+}
+.orderDetail {
+    padding-top: 50px;
+}
+.header-detail {
+    background-color: rgb(255, 255, 255);
+    height: 70px;
+    padding-top: 20px;
+    display: flex;
+    gap: 80px;
+    padding-left: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.header-detail a {
+    margin-top: 15px;
+    font-size: 15px;
+    color: rgb(139, 139, 139);
+    font-family: "Afacad Flux", sans-serif;
+    display: flex;
+    gap: 5px;
+}
+.header-detail i {
+    margin-top: 3px;
+    font-size: 15px;
+    color: rgb(139, 139, 139);
+}
+.header-detail a:hover i, 
+.header-detail a:hover  {
+    color: rgb(0, 0, 0);
+}
+.header-detail h2 {
+    font-family: "Afacad Flux", sans-serif;
+    font-weight: 300;
+    margin-right: 200px;
+    margin-top: 10px;
+}
+.detail-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(50, 50, 50);
+}
+.save h3 {
+    color: rgb(48, 157, 21);
+    text-align: center;
+}
+
+.detail-top p{
+    font-family: "Afacad Flux", sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: rgb(172, 174, 177);
+}
+.detail-top h3{
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 0.3px;
+    margin-top: 5px;
+}
+.payment {
+    display: flex;
+    gap: 5px;
+}
+.payment img {
+    width: 25px;
+    height: 25px;
+    margin-top: 5px;
+}
+.items-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 98%;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.detail-items {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+.detail-items img{
+    width: 200px;
+}
+.detail-items-wrapper {
+    background-color: white;
+    padding: 20px;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.details {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    gap: 10px;
+}
+.detail-items-wrapper h2 {
+    font-family: "Afacad Flux", sans-serif;
+    font-size: 17px;
+    text-align: left;
+}
+.id-level {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    color: rgba(0, 0, 0, 0.285);
+    font-size: 13px;
+    font-family: "Afacad Flux", sans-serif;
+    align-items: left;
+}
+.id-level p {
+    font-size: 13px;
+    font-family: "Afacad Flux", sans-serif;
+    font-weight: 700;
+    border-left: 1px solid rgb(218, 218, 218);
+    border-right: 1px solid rgb(218, 218, 218);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.details h4 {
+    font-size: 20px;
+    text-align: left;
+    margin-top: 10px;
+    font-family: "Afacad Flux", sans-serif;
+    font-weight: 700;
+}
+.discounted-item {
+    display: flex;
+    gap: 10px;
+    font-family: "Poppins", sans-serif;
+    align-items: center;
+}
+.discounted-item h4 {
+    color: rgb(62, 102, 48);
+    font-weight: 800;
+    display: flex;
+    align-items: left;
+    gap: 5px;
+}
+.discounted-item h4 span {
+    font-size: 15px;
+    margin-top: 1px;
+}
+.discounted-item p {
+    color: rgb(145, 145, 145);
+    font-weight: 600;
+    display: flex;
+    align-items: left;
+    gap: 5px;
+    margin-top: 7px;
+    font-size: 13px;
+    text-decoration: line-through;
+}
+.discounted-item p span {
+    font-size: 12px;
+    margin-top: 1px;
+}
+.non-discount-item h4 {
+    font-weight: 800;
+    display: flex;
+    align-items: left;
+    gap: 5px;
+}
+.non-discount-item h4 span {
+    font-size: 15px;
+    margin-top: 1px;
+}

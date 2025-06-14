@@ -1,0 +1,260 @@
+DROP DATABASE IF EXISTS academiaplus;
+CREATE DATABASE academiaplus;
+
+CREATE TABLE student (
+	studentID VARCHAR(3) PRIMARY KEY,
+    name VARCHAR(50),
+    phoneNumber VARCHAR(20),
+    address TEXT,
+    DOB DATE,
+    gender VARCHAR(50),
+    status VARCHAR(50),
+    email VARCHAR(50),
+    `password` VARCHAR(255),
+    studentImage TEXT
+)ENGINE=InnoDB;
+
+CREATE TABLE coursecategory (
+	courseCatID VARCHAR(2) PRIMARY KEY,
+    courseCat VARCHAR(50)
+)ENGINE=InnoDB;
+
+CREATE TABLE lecturer (
+    lecturerID VARCHAR(5) PRIMARY KEY,
+    username VARCHAR(255),
+    `password` VARCHAR(255),
+	lecturerName VARCHAR(255),
+   	universityOrigin VARCHAR(255),
+	image VARCHAR(255)
+)ENGINE=InnoDB;
+
+CREATE TABLE course (
+	courseID VARCHAR(3) PRIMARY KEY,
+    courseCatID VARCHAR(2),
+    lecturerID VARCHAR(5),
+    courseTitle VARCHAR(255),
+    `level` VARCHAR(50),
+    courseDescription TEXT,
+    price INT,
+    courseThumbnail TEXT,
+    
+    FOREIGN KEY (courseCatID) REFERENCES coursecategory(courseCatID)
+    ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (lecturerID) REFERENCES lecturer(lecturerID)
+    ON DELETE CASCADE ON UPDATE CASCADE
+)ENGINE=InnoDB;
+
+CREATE TABLE certification (
+	certificateID VARCHAR(5),
+    courseID VARCHAR(3),
+    certificateName VARCHAR(255),
+    issuer VARCHAR(255),
+    image VARCHAR(255),
+    
+    FOREIGN KEY (courseID) REFERENCES course(courseID)
+    ON DELETE CASCADE ON UPDATE CASCADE
+)ENGINE=InnoDB;
+
+CREATE TABLE cart (
+    studentID VARCHAR(3),
+	courseID VARCHAR(3),
+    
+    PRIMARY KEY (studentID, courseID),
+    FOREIGN KEY (studentID) REFERENCES student(studentID)
+    ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (courseID) REFERENCES course(courseID)
+    ON DELETE CASCADE ON UPDATE CASCADE
+)ENGINE=InnoDB;
+
+CREATE TABLE `session` (
+	sessionID VARCHAR(4) PRIMARY KEY,
+    courseID VARCHAR(3),
+    sessionSeq INT,
+    sessionType VARCHAR(50),
+    
+    FOREIGN KEY (courseID) REFERENCES course(courseID)
+    ON DELETE CASCADE ON UPDATE CASCADE
+)ENGINE=InnoDB;
+
+CREATE TABLE lesson (
+	lessonID VARCHAR(4) PRIMARY KEY,
+    sessionID VARCHAR(4),
+    lessonTitle VARCHAR(255),
+    videoURL TEXT,
+    description TEXT,
+    
+    FOREIGN KEY (sessionID) REFERENCES `session`(sessionID)
+    ON DELETE CASCADE ON UPDATE CASCADE
+)ENGINE=InnoDB;
+
+CREATE TABLE exercise (
+	exerciseID VARCHAR(3) PRIMARY KEY,
+    sessionID VARCHAR(4),
+    question TEXT,
+    
+    FOREIGN KEY (sessionID) REFERENCES `session`(sessionID)
+    ON DELETE CASCADE ON UPDATE CASCADE
+)ENGINE=InnoDB;
+
+CREATE TABLE project (
+	projectID VARCHAR(3) PRIMARY KEY,
+    sessionID VARCHAR(4),
+    projectTitle VARCHAR(255),
+    projectDetail TEXT,
+    fileType VARCHAR(50),
+    
+    FOREIGN KEY (sessionID) REFERENCES `session`(sessionID)
+    ON DELETE CASCADE ON UPDATE CASCADE
+)ENGINE=InnoDB;
+
+CREATE TABLE exerciseattempt (
+	studentID VARCHAR(3),
+    exerciseID VARCHAR(3),
+    answer TEXT,
+    score DECIMAL(10,1),
+    status VARCHAR(50),
+    
+    PRIMARY KEY (studentID, exerciseID),
+    FOREIGN KEY (studentID) REFERENCES student(studentID)
+    ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (exerciseID) REFERENCES exercise(exerciseID)
+    ON DELETE CASCADE ON UPDATE CASCADE
+)ENGINE=InnoDB;
+
+CREATE TABLE projectattempt (
+	studentID VARCHAR(3),
+    projectID VARCHAR(3),
+    submitedFile TEXT,
+    score DECIMAL(10,1),
+    status VARCHAR(50),
+    projectFeedback TEXT,
+    
+    PRIMARY KEY (studentID, projectID),
+    FOREIGN KEY (studentID) REFERENCES student(studentID)
+    ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (projectID) REFERENCES project(projectID)
+    ON DELETE CASCADE ON UPDATE CASCADE
+)ENGINE=InnoDB;
+
+CREATE TABLE learningprogress (
+	studentID VARCHAR(3),
+    sessionID VARCHAR(4),
+    progressValue INT,
+    sessionStatus VARCHAR(10),
+    
+    PRIMARY KEY (studentID, sessionID),
+    FOREIGN KEY (studentID) REFERENCES student(studentID)
+    ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (sessionID) REFERENCES `session`(sessionID)
+    ON DELETE CASCADE ON UPDATE CASCADE
+)ENGINE=InnoDB;
+
+CREATE TABLE overallprogress (
+	studentID VARCHAR(3),
+    courseID VARCHAR(3),
+    progress INT,
+    progressStatus VARCHAR(10),
+    
+    PRIMARY KEY (studentID, courseID),
+    FOREIGN KEY (studentID) REFERENCES student(studentID)
+    ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (courseID) REFERENCES course(courseID)
+    ON DELETE CASCADE ON UPDATE CASCADE
+)ENGINE=InnoDB;
+
+CREATE TABLE enrolled (
+	studentID VARCHAR(3),
+    courseID VARCHAR(3),
+    enrollmentDate DATE,
+    
+    PRIMARY KEY (studentID, courseID),
+    FOREIGN KEY (studentID) REFERENCES student(studentID)
+    ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (courseID) REFERENCES course(courseID)
+    ON DELETE CASCADE ON UPDATE CASCADE
+)ENGINE=InnoDB;
+
+CREATE TABLE temporarycheckout (
+	studentID VARCHAR(3),
+    subtotal DECIMAL(10,2),
+    paymentTypeID VARCHAR(2),
+    paymentFee DECIMAL(10,1),
+    tax DECIMAL(10,2),
+    total DECIMAL(10,2),
+    
+    PRIMARY KEY (studentID),
+    FOREIGN KEY (studentID) REFERENCES student(studentID)
+    ON DELETE CASCADE ON UPDATE CASCADE
+)ENGINE=InnoDB;
+
+CREATE TABLE payment (
+	paymentTypeID VARCHAR(2) PRIMARY KEY,
+    paymentType VARCHAR(50),
+    adminFee INT,
+    paymentIcon VARCHAR(255)
+)ENGINE=InnoDB;
+
+CREATE TABLE `order` (
+	orderID VARCHAR(6) PRIMARY KEY,
+    studentID VARCHAR(3),
+    orderDate DATE,
+    paymentTypeID VARCHAR(2),
+    
+    FOREIGN KEY (studentID) REFERENCES student(studentID)
+    ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (paymentTypeID) REFERENCES payment(paymentTypeID)
+    ON DELETE CASCADE ON UPDATE CASCADE
+)ENGINE=InnoDB;
+
+CREATE TABLE orderdetail (
+	orderDetailID VARCHAR(6) PRIMARY KEY,
+    orderID VARCHAR(6),
+    courseID VARCHAR(3),
+
+    FOREIGN KEY (orderID) REFERENCES `order`(orderID)
+    ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (courseID) REFERENCES course(courseID)
+    ON DELETE CASCADE ON UPDATE CASCADE
+)ENGINE=InnoDB;
+
+CREATE TABLE discount (
+	courseID VARCHAR(3) PRIMARY KEY,
+    discountPercent INT,
+    
+    FOREIGN KEY (courseID) REFERENCES course(courseID)
+    ON DELETE CASCADE ON UPDATE CASCADE
+)ENGINE=InnoDB;
+
+CREATE TABLE requirement (
+    requirementID VARCHAR(3) PRIMARY KEY,
+    courseID VARCHAR(3),
+    requirementName VARCHAR(255),
+    downloadLink TEXT,
+    
+    FOREIGN KEY (courseID) REFERENCES course(courseID)
+    ON DELETE CASCADE ON UPDATE CASCADE
+)ENGINE=InnoDB;
+
+CREATE TABLE careerpath (
+	careerID VARCHAR(4) PRIMARY KEY,
+    courseCatID VARCHAR(2),
+    career VARCHAR(255),
+    information TEXT,
+    salaryRate INT,
+    
+    FOREIGN KEY (courseCatID) REFERENCES coursecategory(courseCatID)
+    ON DELETE CASCADE ON UPDATE CASCADE
+)ENGINE=InnoDB;
+
+CREATE TABLE coursereview (
+	studentID VARCHAR(3),
+    courseID VARCHAR(3),
+    rating INT,
+    review TEXT,
+    reviewDate DATE,
+
+    FOREIGN KEY (studentID) REFERENCES student(studentID)
+    ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (courseID) REFERENCES course(courseID)
+    ON DELETE CASCADE ON UPDATE CASCADE
+)ENGINE=InnoDB;

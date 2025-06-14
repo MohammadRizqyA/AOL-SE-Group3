@@ -1,0 +1,281 @@
+.content {
+    margin-left: 77px;
+    width: 100%;
+    height: 100%;
+}
+
+.sub-header {
+    height: 70px;
+    border-bottom: 2px solid rgb(232, 232, 232);
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.sub-header h1 {
+    font-size: 20px;
+    font-family: "Afacad Flux", sans-serif;
+    border-left: 1px solid rgb(210, 210, 210);
+    padding-left: 20px;
+}
+.sub-header button,
+.sub-header a {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fbfbfb;
+    border: 1px solid rgb(210, 210, 210);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.project-content {
+    display: flex;
+    margin-top: 20px;
+    margin-left: 40px;
+    gap: 20px;
+}
+.project-explanation {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 800px;   
+    border-bottom: 2px solid rgb(232, 232, 232);
+    padding-bottom: 20px;
+    font-family: "Afacad Flux", sans-serif;
+    margin-bottom: 20px;
+}
+.project-explanation p {
+    width: 600px;
+}
+.col {
+    display: flex;
+    flex-direction: column;
+}
+.project-theme {
+    font-family: "Afacad Flux", sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.project-theme h2 {
+    font-weight: 800;
+    font-size: 30px;
+}
+.project-theme p {
+    width: 600px;
+}
+
+.note {
+    font-family: "Afacad Flux", sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-top: 2px solid rgb(232, 232, 232);
+    padding-top: 20px;
+    margin-top: 20px;
+}
+.note p {
+    width: 500px;
+    font-size: 13px;
+}
+
+.row {
+    border-left: 2px solid rgb(232, 232, 232);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 600px;
+}
+.row form {
+    display: flex;
+    flex-direction: column;
+}
+
+.upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 100px;
+}
+.upload span {
+    font-family: "Afacad Flux", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+}
+.upload button {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(207, 207, 207);
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    gap: 10px;
+    color: rgb(182, 182, 182);
+    position: absolute;
+    margin-bottom: 100px;
+}
+.upload button:hover {
+    background-color: #f4f4f4;
+}
+.upload button i {
+    font-size: 30px;
+}
+.submit-button {
+    width: 250px;
+    height: 35px;
+    cursor: pointer;
+    background-color: rgb(146, 55, 55);
+    color: white;
+    border: none;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 15px;
+}
+
+.submission-header {
+    text-align: left;
+    width: 100%;
+    margin-bottom: 40px;
+    font-family: "Afacad Flux", sans-serif;
+    font-size: 15px;
+}
+.submission-text {
+    font-family: "Afacad Flux", sans-serif;
+    font-size: 15px;
+    text-align: center;
+}
+.attempt {
+    font-family: "Afacad Flux", sans-serif;
+    border: 5px solid rgb(126, 53, 53);
+    width: 500px;
+    height: 150px;
+    padding-bottom: 10px;
+}
+.attempt-profile {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.attempt h5 {
+    margin-left: 20px;
+}
+.attempt h2 {
+    margin-left: 20px;
+    font-size: 20px;
+}
+.attempt a {
+    position: absolute;
+    font-size: 50px;
+    opacity: 0;
+    background-color: rgba(255, 255, 255, 0.721);
+    width: 270px;
+    padding-left: 230px;
+    padding-top: 50px;
+    padding-bottom: 44px;
+    transform: translateY(-55px);
+    
+}
+.attempt a i {
+    color: rgb(230, 230, 230);
+}
+.attempt:hover a {
+    opacity: 1;
+}
+.project-submitted {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.passed-project {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: "Afacad Flux", sans-serif;
+    background-color: #d4edda;
+    color: #155724;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 10px;
+}
+.passed-project h2 {
+    font-size: 20px;
+}
+.passed-project i {
+    font-size: 25px;
+}
+.notpass-project {
+    display: flex;
+    gap: 10px;
+    font-family: "Afacad Flux", sans-serif;
+    align-items: center;
+    color: rgb(155, 65, 65);
+}
+.notpass-project h2 {
+    font-size: 20px;
+}
+.notpass-project i {
+    font-size: 20px;
+}
+.notpass {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.feedback {
+    font-family: "Afacad Flux", sans-serif;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-bottom: 50px;
+}
+.feedback h2 {
+    font-size: 15px;
+}
+.feedback-col {
+    border:  2px solid rgb(200, 200, 200);
+    padding: 10px;
+}
+.feedback-col p {
+    display: flex;
+    align-items: center;
+    border-left: 1px solid rgb(205, 205, 205);
+    padding-left: 10px;
+}
+.feed-img {
+    width: 30px;          
+    height: 30px;
+    object-fit: cover;     
+    border-radius: 50%; 
+    cursor: pointer;
+}
+.acessor-response {
+    display: flex;
+    gap: 10px;
+    border: 1px solid rgb(205, 205, 205);
+    padding: 10px;
+}

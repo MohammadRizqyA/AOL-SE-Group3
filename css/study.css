@@ -1,0 +1,532 @@
+.content {
+    margin-left: 77px;
+    width: 100%;
+    height: 100%;
+}
+.sub-header {
+    height: 70px;
+    border-bottom: 2px solid rgb(232, 232, 232);
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.sub-header h1 {
+    font-size: 20px;
+    font-family: "Afacad Flux", sans-serif;
+    border-left: 1px solid rgb(210, 210, 210);
+    padding-left: 20px;
+}
+.sub-header button,
+.sub-header a {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fbfbfb;
+    border: 1px solid rgb(210, 210, 210);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.course-detail {
+    margin-left: 30px;
+    margin-right: 20px;
+    margin-top: 20px;
+    width: 550px;
+    height: 120px;
+    border-bottom: 2px solid rgb(232, 232, 232);
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+.course-detail img {
+    width: 140px;
+    height: 100px;
+}
+.sub-details h2 {
+    font-size: 20px;
+    max-width: 380px;
+    font-family: "Afacad Flux", sans-serif;
+    line-height: 18px;
+}
+.sub-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.level-id {
+    display: flex;
+    align-items: center;
+    gap: 200px;
+    font-family: "Afacad Flux", sans-serif;
+}
+.level-id h3 {
+    font-weight: 800;
+    font-size: 25px;
+    color: rgb(148, 52, 35);
+}
+.course-outline {
+    width: 550px;
+    margin-left: 30px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.course-outline h2 {
+    font-family: "Afacad Flux", sans-serif;
+    font-size: 20px;
+}
+.course-outline p {
+    font-family: "Afacad Flux", sans-serif;
+    width: 500px;
+}
+
+.flex {
+    display: flex;
+}
+.session {
+    height: 700px;
+    border-left: 2px solid rgb(232, 232, 232);
+    padding-left: 35px;
+    margin-top: 15px;
+}
+.session h2 {
+    font-family: "Afacad Flux", sans-serif;
+    margin-top: 20px;
+}
+.session-desc{
+    font-family: "Afacad Flux", sans-serif;
+    margin-bottom: 40px;
+    width: 500px;
+}
+.session-list {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+.session-list-session {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 40px;
+    margin-left: 50px;
+}
+.lesson {
+    width: 250px;
+    height: 250px;
+    background-image: url('../images/sessions_bg/1.png');
+    background-size: cover; /* Agar gambar menyesuaikan ukuran layar */
+    background-position: center; /* Pusatkan gambar */
+    background-repeat: no-repeat;
+    border-radius: 25px;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.lesson:hover {
+    transform: scale(1.05);
+}
+.exercise {
+    width: 250px;
+    height: 250px;
+    background-color: rgb(209, 209, 209);
+    border-radius: 25px;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3);
+    background-image: url('../images/sessions_bg/1.png');
+    background-size: cover; /* Agar gambar menyesuaikan ukuran layar */
+    background-position: center; /* Pusatkan gambar */
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.exercise:hover {
+    transform: scale(1.05);
+}
+.project {
+    width: 250px;
+    height: 250px;
+    background-color: rgb(209, 209, 209);
+    border-radius: 25px;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3);
+    background-image: url('../images/sessions_bg/1.png');
+    background-size: cover; /* Agar gambar menyesuaikan ukuran layar */
+    background-position: center; /* Pusatkan gambar */
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.project:hover {
+    transform: scale(1.05);
+}
+.top {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.444);
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin-left: 15px;
+    margin-top: 15px;
+    font-size: 20px;
+}
+.bot {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.601);
+    width: 250px;
+    height: 150px;
+    margin-top: 100px;
+    border-radius: 0 0 25px 25px;
+}
+.bot h3 {
+    font-family: "Afacad Flux", sans-serif;
+    font-weight: 800;
+    margin-left: 20px;
+    margin-top: 10px;
+    font-size: 15px;
+}
+.bot p {
+    font-family: "Afacad Flux", sans-serif;
+    font-weight: 300;
+    padding: 20px;
+    font-size: 13px;
+}
+
+
+
+.circle-wrapper {
+    text-align: center;
+    font-family: "Afacad Flux", sans-serif;
+    margin-left: 0px;
+    margin-top: 50px;
+}
+
+.progress-ring__bg {
+    fill: none;
+    stroke: #e6e6e6;
+    stroke-width: 12;
+}
+
+.progress-ring__circle {
+    fill: none;
+    stroke: #26762a;
+    stroke-width: 12;
+    stroke-linecap: round;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    transition: stroke-dashoffset 0.8s ease;
+}
+
+.circle-text {
+    font-size: 22px;
+    font-weight: bold;
+    fill: #333;
+}
+.progress {
+    padding-left: 30px;
+    padding-top: 0px;
+    margin-top: 20px;
+    width: 550px;
+    border-top: 2px solid rgb(232, 232, 232);
+    display: flex;
+    flex-direction: row;
+    height: auto;
+}
+.progress h2 {
+    font-family: "Afacad Flux", sans-serif;
+    font-size: 25px;
+}
+.progress p {
+    font-size: 18px;
+}
+
+.course-status-label {
+    padding: 6px 12px;
+    display: inline-block;
+    border-radius: 0px;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: "Afacad Flux", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    font-weight: 800;
+    margin-right: 50px;
+}
+
+.course-status-label.ongoing {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+    width: 90px;
+    height: 30px;
+    
+}
+
+.course-status-label.passed h3 {
+     font-size: 15px;
+    font-weight: 800;
+}
+.course-status-label.passed p {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    width: 90px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    font-weight: 800;
+    border-radius: 5px;
+}
+
+.progression {
+    display: flex;
+}
+.total-session {
+    margin-top: 120px;
+    font-family: "Afacad Flux", sans-serif;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+.total-session h4 {
+    font-size: 18px;
+}
+.total-session h5 {
+    font-size: 15px;
+}
+
+.allsession {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Afacad Flux", sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+}
+.allsession:hover {
+    text-decoration: underline;
+}
+.header-session {
+    display: flex;
+    align-items: left;
+}
+.header-session button {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(203, 203, 203);
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    font-size: 17px;
+    margin-top: 24px;
+    margin-right: 20px;
+}
+
+.lesson-button {
+    padding: 10px 16px;
+    background-color: #e0e0e0;
+    color: rgb(159, 159, 159);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    font-family: "Afacad Flux", sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+}
+.lesson-button:hover {
+    background-color: #303030;
+}
+.exercise-link {
+    display: block;
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 500;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+    font-family: "Afacad Flux", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    width: 300px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    border: 2px solid rgb(231, 231, 231);
+    justify-content: center;
+    margin-top: 10px;
+}
+.exercise-link i {
+    font-size: 20px;
+}
+.exercise-link:hover {
+    background-color: #f4f4f4
+}
+.exercise-link p {
+    font-family: "Afacad Flux", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+}
+.exercise-submitted {
+    margin-top: 50px;
+    font-family: "Gabarito", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 700px;
+}
+
+.exercise-submitted p {
+    font-size: 14px;
+    font-weight: 500;
+    color: #b3b3b3;
+    text-align: center;
+}
+.waiting-exercise {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    color: #000000;
+}
+.waiting-exercise i {
+    font-size: 50px;
+    color: #bababa;
+    margin-top: 10px;
+}
+.notpass-exercise {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    color: #000000;
+}
+.notpass-exercise i {
+    font-size: 50px;
+    color: #a24242;
+    margin-top: 10px;
+}
+.passed-exercise {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    color: #3d7537;
+    gap: 10px;
+    background-color: #e6f9e4;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px;
+}
+.passed-exercise h2 {
+    font-size: 18px;
+}
+.passed-exercise i {
+    font-size: 25px;
+    margin-top: 15px;
+}
+
+.exercise-submitted a {
+    text-decoration: none;
+    color: rgb(91, 91, 91);
+    margin-top: 200px;
+    font-weight: 800;
+    font-size: 15px;
+    border: 1px solid rgb(214, 214, 214);
+    padding: 10px;
+}
+.exercise-submitted a:hover {
+    text-decoration: underline;
+}
+.start-attempt {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-left: 50px;
+    gap: 10px;
+}
+.start-attempt h2 {
+    font-weight: 800;
+    font-size: 20px;
+}
+.sessionSeq {
+    margin-left: 50px;
+    font-size: 20px;
+}
+
+.requirement {
+    display: flex;
+    flex-direction: column;
+    font-family: "Gabarito", sans-serif;
+    padding-bottom: 50px;
+}
+.requirement h2 {
+    margin-bottom: 10px;
+}
+.requirement p {
+    font-size: 13px;
+}
+.req {
+    display: flex;
+}
+.spec {
+    border-right: 2px solid rgb(226, 226, 226);
+    padding-right: 20px;
+    margin-right: 20px;
+}
+.soft h4 {
+    font-size: 13px;
+}
+.requirement h5 {
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+.download-link {
+    display: flex;
+    margin-top: 1px;
+    margin-bottom: 5px;
+}
+.download-link a {
+    font-size: 13px;
+    color: rgb(150, 150, 150);
+}
+.download-link a:hover {
+    color: rgb(168, 168, 168);
+}
+.download-link p {
+    width: 120px;
+    color: #515151;
+    font-weight: 300;
+    font-family: sans-serif;
+    font-size: 13px;
+}
+
+.menu a {
+    margin-left: 35px;
+}

@@ -1,0 +1,488 @@
+.content {
+    padding-top: 50px;
+    z-index: 1;
+    margin-bottom: 50px;
+}
+
+.first-content {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    padding-top: 50px;
+    padding-bottom: 40px;
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    gap: 100px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 3;
+}
+.detail-course {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: rgb(48, 48, 48);
+}
+.detail-course h1 {
+    font-family: "Poppins", sans-serif;
+    line-height: 35px;
+}
+.detail-course h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+}
+.detail-course p {
+     font-family: "Afacad Flux", sans-serif;
+    font-size: 18px;
+}
+.first-content img {
+    width: 520px;
+    height: 340px;
+}
+.rating {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    align-content: center;
+    gap: 4px;
+}
+.rating h2 {
+    font-size: 15px;
+    margin-right: 10px;
+    color: rgb(0, 0, 0);
+}
+.rating p {
+    margin-left: 10px;
+    font-size: 15px;
+    color: rgb(202, 202, 202);
+}
+.star {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: rgb(255, 208, 0);
+  stroke-width: 1.5;
+}
+.star.full {
+  fill: rgb(255, 208, 0);
+}
+.star.half path {
+  fill: url(#halfGrad);
+}
+
+.lecturer {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    gap: 15px;
+}
+.lecturer h3 {
+    font-size: 15px;
+}
+.lecturer p {
+    font-size: 15px;
+    color: rgb(157, 157, 157);
+    text-decoration: underline;
+    cursor: pointer;
+}
+.last-detail {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgb(161, 161, 161);
+}
+.last-detail i {
+    font-size: 15px;
+}
+.last-detail p {
+    font-size: 18px;
+    margin-bottom: 2px;
+}
+.pricing {
+    display: flex;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    gap: 10px;
+}
+.discount {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.discount i {
+    font-size: 20px;
+    color: #a80808;
+    transform: rotate(-5deg);
+}
+.discount h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 17px;
+    color: rgb(53, 53, 53); 
+}
+.discount-pricing {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0px;
+}
+.discount-pricing h2 {
+    font-size: 15px;
+    font-weight: 300;
+    margin-left: 10px;
+    color: #bf4f4faa;
+}
+.discount-pricing h3 {
+    font-size: 28px;
+    color: rgb(64, 121, 21);
+    font-weight: 700;
+    display: flex;
+    align-items: left;
+    gap: 10px;
+}
+.discount-pricing h3 span {
+    font-size: 15px;
+    font-weight: 700;
+    margin-top: 6px;
+}
+.discounted {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.discounted p {
+    font-size: 25px;
+    color: rgb(171, 171, 171);
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    font-weight: 300;
+    font-family: "Poppins", sans-serif;
+    font-style: italic;
+    display: flex;
+    align-items: left;
+    text-decoration: line-through;
+    gap: 8px;
+}
+.discount-pricing p span {
+    font-size: 15px;
+    font-weight: 700;
+    margin-top: 6px;
+}
+
+.non-discount h2{
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    color: rgb(64, 121, 21);
+}
+
+.second-content {
+    position: absolute;
+    width: 100%;
+    height: 110px;
+    background-color: rgb(255, 255, 255);
+    z-index: 2;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    padding-bottom: 10px;
+}
+
+.second-content form button {
+    font-family: "Bebas Neue", sans-serif;
+    background-color: transparent;
+    width: 300px;
+    height: 45px;
+    color: rgb(207, 7, 7);
+    font-size: 20px;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgb(207, 7, 7);
+    cursor: pointer;
+}
+.second-content form button:hover {
+    background-color: rgba(129, 4, 4, 0.136)
+}
+.second-flex {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+.term {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+.term h2 {
+    font-size: 12px;
+}
+.term p {
+    font-size: 12px;
+    line-height: 15px;
+}
+.add-to-bag {
+    display: flex;
+    gap: 10px;
+}
+.third-content {
+    padding-bottom: 100px;
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.preview-container {
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    background-color: #000000aa;
+    position: fixed;
+    display: flex;
+}
+.preview {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: left;
+    margin-left: 600px;
+    height: 530px;
+    width: 600px;
+    background-color: rgba(0, 0, 0, 0.738);
+    margin-top: 45px;
+}
+.preview h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    width: 92%;
+     color: white;
+}
+.preview h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    margin-left: 50px;
+    width: 92%;
+    color: rgb(142, 142, 142);
+}
+.preview button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 50px;
+}
+.preview i {
+    color: white;
+    text-align: right;
+    margin-top: 20px;
+}
+.preview iframe {
+    display: flex;
+    margin-right: 25px;
+    margin-top: 100px;
+    width: 550px;
+    height: 290px;
+}
+.related {
+    height: 100px;
+    width: 50%;
+    margin-top: 30px;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 30px;
+    margin-left: 80px;
+}
+.related h1 {
+    font-size: 18px;
+}
+.courses-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 0px;
+    width: 550px;
+    padding-bottom: 30px;
+}
+.course-wrapper {
+    display: flex;
+    gap: 20px;
+    color: black;
+    padding: 15px;
+}
+.course-wrapper:hover {
+    background-color: rgba(0, 0, 0, 0.048);
+}
+.course-wrapper img{
+    width: 180px;
+}
+.detail-related h2 {
+    font-size: 14px;
+}
+.detail-related p {
+    font-size: 10px;
+}
+.ratings {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.ratings h2 {
+    font-size: 12px;
+    margin-right: 10px;
+    color: rgb(0, 0, 0);
+}
+.ratings p {
+    margin-left: 10px;
+    font-size: 15px;
+    color: rgb(202, 202, 202);
+}
+.stars {
+  width: 10px;
+  height: 10px;
+  fill: none;
+  stroke: rgb(255, 208, 0);
+  stroke-width: 2.5;
+}
+.stars.full {
+  fill: rgb(255, 208, 0);
+}
+.stars.half path {
+  fill: url(#halfGrad);
+}
+.related-review {
+    display: flex;
+    gap: 50px;
+}
+.review {
+    margin-top: 20px;
+    width: 800px;
+}
+.review h2 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+.review h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+    background-color: rgb(248, 248, 248);
+    width: 700px;
+    height: 100px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ratingss {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    align-content: center;
+    gap: 4px;
+    height: 20px;
+}
+.ratingss h2 {
+    font-size: 15px;
+    margin-right: 10px;
+    color: rgb(0, 0, 0);
+}
+.ratingss p {
+    margin-left: 10px;
+    font-size: 15px;
+    color: rgb(202, 202, 202);
+}
+.starss {
+  width: 15px;
+  height: 15px;
+  fill: none;
+  stroke: rgb(255, 208, 0);
+  stroke-width: 2.5;
+}
+.starss.full {
+  fill: rgb(255, 208, 0);
+}
+.starss.half path {
+  fill: url(#halfGrad);
+}
+
+.review-comment {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 20px;
+    gap: 10px;
+    border: 1px solid black;
+}
+.student {
+    display: flex;
+    font-family: "Poppins", sans-serif;
+    gap: 10px;
+    background-color: #f9f9f9;
+    padding: 15px;
+}
+.student img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.student-detail {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.student-detail h3 {
+    font-size: 15px;
+}
+.student-detail p{
+    font-size: 12px;
+}
+.review-comment h5 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    color: rgb(134, 134, 134);
+}
+.review-comment h6 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+}
+.include {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 50px;
+}
+.include h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 30px;
+}
+.include p {
+    font-size: 15px;
+    margin-left: 20px;
+}
+.include i {
+    font-size: 12px;
+}
